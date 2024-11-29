@@ -12,13 +12,13 @@ try {
         echo "Subscription data found: " . json_encode($subscriptionData) . "\n";
 
         $token = $subscriptionData['token'];
-        $hashKey = 'demo';
-        $vid = 'demo';
+        $hashKey = 'demo'; // update to your API Key
+        $vid = 'demo'; // update to your vid
 
         $fields = [
             'vid' => $vid,
             'amount' => '', // enter amount
-            'callback' => 'https://f8a5-197-232-61-203.ngrok-free.app/Sentinel/test_script/recurring_payment_callback.php',
+            'callback' => 'your-server-url/recurring_payment_callback.php', // update to you callback url
             'currency' => 'KES',
             'email' => '', // enter email
             'phone' => '', // enter phone
